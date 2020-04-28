@@ -10,8 +10,7 @@ function App() {
         <p>
           Hello World!!!
         </p>
-        This all looks so new and cool, doesn't it?
-        (I love the logo, can I keep it? :D)
+        Some changes, test.
       </p>
     </div>
   );
