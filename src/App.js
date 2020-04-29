@@ -2,7 +2,7 @@ import React from "react";
 // import logo from "./logo.svg";
 import "./App.css";
 import Title from "./components/Title";
-import Pokemon from "./components/Pokemon";
+import Pokemon from "./components/Pokemon/Pokemon";
 
 const all_pokemon = [
   {
@@ -37,11 +37,13 @@ const all_pokemon = [
 
 function App() {
   return (
-    <div className="App">
-      <main>
+    <main className="container my-5">
+      <div className="mb-4">
         <Title content="Gotta catch 'em all!" />
-        <div>
-          {all_pokemon.map((pokemon) => (
+      </div>
+      <div className="row">
+        {all_pokemon.map((pokemon) => (
+          <div className="col-md-6 col-lg-4">
             <Pokemon
               name={pokemon.name}
               weight={pokemon.weight}
@@ -49,10 +51,10 @@ function App() {
               terrifying={pokemon.terrifying}
               abilities={pokemon.abilities}
             />
-          ))}
-        </div>
-      </main>
-    </div>
+          </div>
+        ))}
+      </div>
+    </main>
   );
 }
 
