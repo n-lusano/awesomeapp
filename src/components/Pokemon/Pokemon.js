@@ -6,7 +6,7 @@ export default function Pokemon(props) {
   return (
     <div className="card Pokemon shadow-sm mb-4">
       <div className="card-body pb-0">
-        <h5 className="card-title">{props.name}</h5>
+        <h4 className="card-title">{props.name}</h4>
         <h6 className="card-subtitle mb-3 text-info">
           {props.awesome ? "An awesome Pokemon" : "Not awesome"}
         </h6>
@@ -20,9 +20,7 @@ export default function Pokemon(props) {
       </div>
       <ul className="list-group list-group-flush">
         {props.abilities.map((ability) => {
-          return (
-            <li className="list-group-item list-group-item-info">{ability}</li>
-          );
+          return <li className="list-group-item text-secondary">{ability}</li>;
         })}
       </ul>
     </div>
